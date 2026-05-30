@@ -1,0 +1,29 @@
+TOPIC: Retrieval-Augmented Generation (RAG)
+Retrieval-Augmented Generation (RAG) is a technique that enhances LLMs by retrieving relevant documents from an external knowledge base before generating a response. It was introduced by Lewis et al. in 2020. RAG reduces hallucinations by grounding model outputs in retrieved factual content. RAG systems typically use a dense retriever (like DPR or sentence-transformers) and a generative model (like GPT or BART). RAG is widely used in open-domain question answering and enterprise knowledge management.
+
+TOPIC: Hallucinations in Large Language Models
+Hallucinations in LLMs refer to confident but factually incorrect or fabricated outputs. They occur due to the model's tendency to generate fluent text even without grounding knowledge. Hallucinations are categorized as intrinsic (contradicting the source) and extrinsic (adding unsupported information). Studies show that even state-of-the-art models like GPT-4 hallucinate in complex multi-step reasoning tasks. Hallucination rates increase when questions require knowledge beyond the training data cutoff.
+
+TOPIC: Multi-Agent Systems in AI
+Multi-agent systems consist of multiple AI agents that interact to accomplish tasks. In LLM-based systems, agents can be assigned specialized roles such as generation, critique, and verification. Frameworks like LangChain and AutoGen support building multi-agent pipelines. Multi-agent approaches improve output quality by introducing checks and balances between agents. They also improve interpretability by making the reasoning process transparent through agent interactions.
+
+TOPIC: Vector Databases and Semantic Search
+Vector databases store embeddings of text chunks for semantic similarity search. FAISS (Facebook AI Similarity Search) is a widely used open-source vector database. Semantic search retrieves documents based on meaning rather than exact keyword match. Sentence-transformers like all-MiniLM-L6-v2 convert text into dense vector representations. Cosine similarity and inner product are common metrics for comparing vectors in retrieval tasks.
+
+TOPIC: Groq and LLM Inference
+Groq is a high-performance AI inference platform that provides extremely fast LLM responses. Groq supports open-source models including Llama 3, Mixtral, and Gemma via a simple REST API. The Groq API is compatible with OpenAI-style chat completion format. Groq offers a free tier with generous rate limits suitable for student projects. Llama 3 8B on Groq provides fast and accurate responses for question answering tasks.
+
+TOPIC: Evidence-Based Reasoning in AI
+Evidence-based reasoning requires that conclusions be explicitly supported by provided facts or documents. In AI systems, enforcing evidence-based reasoning reduces the risk of models fabricating unsupported claims. Chain-of-thought prompting encourages models to reason step-by-step before arriving at conclusions. Constitutional AI principles guide models to acknowledge uncertainty and avoid unsupported assertions. Explicitly instructing models to cite evidence improves both accuracy and interpretability.
+
+TOPIC: Sentence Transformers and Embeddings
+Sentence transformers are pre-trained models that encode sentences into fixed-size embedding vectors. The model all-MiniLM-L6-v2 is a lightweight and efficient sentence transformer widely used in semantic search. Embeddings capture the semantic meaning of text and allow similarity comparisons using cosine distance. Hugging Face hosts hundreds of pre-trained sentence transformer models for various NLP tasks. Embedding-based retrieval outperforms BM25 keyword search on paraphrase and semantic similarity tasks.
+
+TOPIC: Critique and Verification in NLP
+Critiquing is the process of evaluating a generated response for errors, unsupported claims, or logical inconsistencies. Automatic critique agents can use LLMs to identify hallucinations without human involvement. Self-consistency methods ask models to generate multiple answers and select the majority vote. External critics, unlike self-verification, use a separate agent with a different prompt to reduce confirmation bias. Debate-based verification has models argue for and against a claim to identify weaknesses.
+
+TOPIC: Python for AI Development
+Python is the dominant programming language for AI and machine learning development. Libraries such as NumPy, PyTorch, and HuggingFace Transformers are foundational to modern AI. Virtual environments and requirements.txt files help manage dependencies in Python AI projects. Python's simplicity and rich ecosystem make it ideal for rapid prototyping of AI systems. The groq Python SDK simplifies interaction with Groq-hosted models for building LLM-powered applications.
+
+TOPIC: Evaluation Metrics for Question Answering
+Exact Match (EM) measures whether the model's answer exactly matches the reference answer. F1 score measures overlap between predicted and reference answer tokens. BERTScore uses contextual embeddings to evaluate semantic similarity between generated and reference text. Human evaluation remains the gold standard for assessing hallucination rates in open-ended QA. ROUGE and BLEU scores are used for summarization and translation but have limitations for factual accuracy.
